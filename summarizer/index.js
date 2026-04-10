@@ -38,11 +38,7 @@ summaryLengthInput.addEventListener('input', updateSummaryLengthText)
 
 // Button Event Handlers
 async function summarize() {
-    // ***********
-    // CHALLENGE:
-    // ***********
-    // Handle errors by surrounding the entire content of the summarize function with a try and catch. Inside the catch block, just pass the error caught to the handleError() function
-    try {
+     try {
 
         startLoading()
         const text = textInputArea.value
@@ -98,7 +94,7 @@ function dismissError() {
     clear()
 }
 
-// Other Event Handlers
+
 function focusOnTextInputArea() {
     textInputArea.focus()
 }
@@ -112,7 +108,7 @@ function updateSummaryLengthText() {
     summaryLengthText.textContent = `Summary Length: ${summaryLengthInput.value} Words`
 }
 
-// Helper Functions
+
 function scrollTextAreaToTop() {
     setTimeout(() => {
         textInputArea.scrollTop = 0
